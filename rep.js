@@ -44,7 +44,7 @@ function repList() {
         var ct = 1;
         var ctn = 0;
         for (var i = 0; i < lb; i++) {
-            if (ChannelID !== "365154401456881666") {
+            if (ChannelID !== "283124279044866048") {
                 if (byAmount[i]["Amount"] > 0) {
                     if (i > 0) {
                         if (byAmount[i]["Amount"] === byAmount[(i - 1)]["Amount"]) {
