@@ -1,6 +1,6 @@
 function repList() {
-    if (Object.keys(Rep).length > 2) {
-        var obj = sortObject(Rep);
+    if (Object.keys(rep).length > 2) {
+        var obj = sortObject(rep);
         delete obj.BanList;
         delete obj.rll;
         for (var i = 0; i < Object.keys(obj).length; i++) {
@@ -9,7 +9,7 @@ function repList() {
             if (GetUsername(ID) !== null) {
                 obj[ID]["Name"] = GetUsername(ID);
             } else {
-                delete Rep[ID];
+                delete rep[ID];
                 delete obj[ID];
             };
         };
@@ -29,7 +29,7 @@ function repList() {
             return b.Amount - a.Amount;
         });
         var lb = 0;
-        if (Rep.hasOwnProperty("rll")) {
+        if (rep.hasOwnProperty("rll")) {
             if (rep.rll === "Everybody") {
                 lb = Object.keys(obj).length;
             } else if (Object.keys(obj).length < JSON.parse(rep.rll)) {
